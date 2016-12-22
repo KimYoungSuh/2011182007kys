@@ -7,15 +7,18 @@ import char_sellect
 
 name = "TitleState"
 image = None
-
+bgm = None
 def enter():
-    global image
+    global image, bgm
     image = load_image('title.png')
+    bgm = load_music('FL_BGM_A.mp3')
+    bgm.set_volume(64)
+    bgm.repeat_play()
 
 def exit():
-    global image
+    global image, bgm
     del(image)
-
+    del(bgm)
 
 def pause():
     pass
